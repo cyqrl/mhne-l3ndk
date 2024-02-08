@@ -1,0 +1,7 @@
+[build]
+command = "npm install && npm run build"  # If you have build steps
+publish = "public"  # Change this to your build output directory
+
+[dev]
+command = "node app.js"  # Command to start your Express.js server
+port = 3000  # Port your Express.js server listens to
