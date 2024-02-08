@@ -1,6 +1,6 @@
 [build]
-command = "npm install && npm run build"  # If you have build steps
-publish = "public"  # Change this to your build output directory
+command = "npm install"
+publish = "public"
 
 [dev]
 command = "node app.js"  # Command to start your Express.js server
