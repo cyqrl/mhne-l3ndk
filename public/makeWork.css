@@ -1,0 +1,163 @@
+*{
+    font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Open Sans','Helvetica Neue',sans-serif;
+    margin:0;
+    padding:0;
+    scroll-behavior:smooth;
+    transition:1s;
+    border:0;
+    outline:0;
+    vertical-align:baseline;
+    background:0;
+    text-decoration: none;
+}
+body {
+    background-color: black;
+    color: darkred;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+h1, h2 {
+    color: #ce1618;
+    margin-bottom: 1em;
+    
+}
+
+.container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+form {
+    width: 383.500px;
+
+    background: #000;
+    border: 4px solid darkred;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+}
+
+input[type="tel"],
+input[type="number"],
+input[type="text"],
+textarea {
+    color: white;
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 1em;
+    border-bottom: 4px solid darkred;
+    border-radius: 5px;
+    direction: rtl;
+}
+textarea {
+    min-height: 1.1em;
+    max-height: 5em;
+    max-width: 50%;
+    min-width: 50%;
+}
+
+button {
+    background-color: red;
+    color: white;
+    padding: 10px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: crimson;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+
+table, th, td {
+    border: 1px solid darkred;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: darkred;
+    color: white;
+}
+
+a {
+    color: darkred;
+    text-decoration: none;
+}
+
+
+
+
+::-webkit-scrollbar{
+    width:12px
+}
+
+
+::-webkit-scrollbar-thumb{
+    background-color:#5a0101;
+    border-radius:10px
+}
+
+
+::-webkit-scrollbar-track{
+    background-color:#f1f1f1
+}
+
+
+
+.main{
+    width:53%;
+    height:18px;
+    align-self:center;
+    align-items:center;
+    padding:18px 40px;
+    justify-content:space-around;
+    display:flex;
+    position:relative;
+}
+  header{
+    display:flex;
+    position:relative;
+    width:100%;
+    justify-content:center;
+    background-image:linear-gradient(to right,#9e0404 ,#000);
+    direction:rtl;
+    z-index:999;
+    box-shadow: 0 0 6em darkred ;
+    
+}
+header a{
+    text-decoration:none;
+    font-weight:700;
+    color:#fff;
+    font-size:15px;
+    margin:0 10px;
+    opacity:.9
+}
+.logo img {
+    height: 5em;
+}
+.hover:hover,.logo img:hover{
+    scale:1.4;
+    padding:0 10px
+}
