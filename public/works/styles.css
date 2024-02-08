@@ -1,0 +1,161 @@
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  transition: 1s;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+body {
+  background-color: black;
+  color: darkred;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+h1, h2 {
+  color: darkred;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 40%;
+  background-color: darkred;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="tel"],
+input[type="text"],
+
+
+button {
+  background-color: rgb(99, 2, 2);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: crimson;
+}
+
+table {
+  min-width: 42.08%;
+  border-radius: 2em;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table, th, td {
+  border: 1px solid darkred;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+td {text-align: center;}
+th {
+  background-color: darkred;
+  color: white;
+  width: 30%;
+}
+
+a {
+  color: darkred;
+  text-decoration: none;
+}
+
+
+.stars input[type="radio"] {
+  display: none;
+}
+.stars label {
+  font-size: 3.8em;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 1s;
+}
+.stars input[type="radio"]:checked ~ label {
+  color: gold;
+}
+
+#averageRating {
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+}
+#commentForm {
+  min-width: fit-content;
+  white-space: nowrap;
+}
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(to right, rgb(158, 4, 4) , #000000);
+  direction: rtl;
+
+  z-index: 999;
+  position: relative;
+}
+header a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 15px;
+  margin: 0 10px;
+  opacity: .9;
+}
+
+.main {
+  display: flex;
+  width: 53%;
+  height: 18px;
+  align-self: center;
+  align-items: center;
+  position: relative;
+  padding: 18px 40px;
+  justify-content: space-around;
+}
+.hover:hover, .logo img:hover {
+  scale: 1.4;
+  padding: 0 10px;
+  
+}
+
+.logo img {
+  height: 7vh;
+}
+
+::-webkit-scrollbar{
+  width:12px
+}
+
+
+::-webkit-scrollbar-thumb{
+  background-color:#5a0101;
+  border-radius:10px
+}
+
+
+::-webkit-scrollbar-track{
+  background-color:#f1f1f1
+}
