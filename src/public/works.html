@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مهني لعندك | الاعمال</title>
+  <style>
+    *{
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Open Sans','Helvetica Neue',sans-serif;
+      margin:0;
+      padding:0;
+      scroll-behavior:smooth;
+      transition:1s;
+      border:0;
+      outline:0;
+      vertical-align:baseline;
+      text-decoration: none;
+      background:0
+      
+  }
+  
+
+header{
+  display:flex;
+  position:relative;
+  width:100%;
+  justify-content:center;
+  background-image:linear-gradient(to right,#9e0404 ,#000);
+  direction:rtl;
+  z-index:999;
+  
+}
+.main{
+  width:53%;
+  height:18px;
+  align-self:center;
+  align-items:center;
+  padding:18px 40px;
+  justify-content:space-around;
+  display:flex;
+  position:relative;
+}
+header a{
+  text-decoration:none;
+  font-weight:700;
+  color:#fff;
+  font-size:15px;
+  margin:0 10px;
+  opacity:.9
+}
+.logo img {
+  height: 5em;
+}
+.hover:hover,.logo img:hover{
+  scale:1.4;
+  padding:0 10px
+}
+
+    body{
+      background-color: #000;
+      overflow-x: hidden;
+    }
+    main {
+      border: 4px darkred solid;
+      border-radius:15px;
+      height:12em;
+      flex-flow:column;
+      max-width: 25%;
+      margin: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      min-width: 255.667px;
+      overflow: hidden;
+      position: relative;
+    }
+    main:hover {
+      scale: 1.2;
+    }
+    .file {
+      position: relative;
+      bottom: 10px;
+      width: 100%;
+      height: 15%;
+      background-color: #333;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      display:flex;
+      justify-content:center;
+    }
+      .Files {
+        
+        margin: 0;
+        margin-top: 2em;
+        position: absolute;
+        padding: 0;
+        color: #fff;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+      }
+      
+      .file a {
+        position: absolute;
+        top: 2px;
+        text-decoration: none;
+        color: white;
+      }
+      .file a:hover {
+        text-decoration: underline;
+      }
+      .SubjectImage {
+        width: 100%;
+        flex-grow: 1;
+      }
+      .Link {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        flex-flow: column;
+
+      }
+      #fileContainer {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-flow: row-reverse wrap;
+      }
+            
+      ::-webkit-scrollbar{
+        width:12px
+      }
+
+
+      ::-webkit-scrollbar-thumb{
+        background-color:#5a0101;
+        border-radius:10px
+      }
+
+
+      ::-webkit-scrollbar-track{
+        background-color:#f1f1f1
+      }
+      @media (max-width: 1157px) {
+        .main a {
+          scale: .8;
+        }
+        .logo {
+          scale: .6;
+        }
+      }
+      span {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.646);
+        margin-top: 2px;
+      }
+      .Subject {
+        display: inline-block;
+        color: white;
+      }
+  </style>
+</head>
+<body>
+  <header id="header">
+    <div class="main">
+    <a href="./index.html" class="logo"><img src="./images/l.png" alt="logo"></a>
+        <a href="./index.html"  class="ll home hover">الصفحة الرئيسية</a>
+        <a href="./works.html" style="font-size: 1.2em;text-decoration: underline;" class="ll courses hover">الاعمال</a>  
+        <a href="./makeWork.html" class="ll account hover">إنشاء عمل</a>
+        <a href="./contact/contact.html"  class="ll contact hover">تواصل معنا</a>
+</div>  
+</header>
+  <section class="Files">
+    <div class="container" style="width: 50%;" id="fileContainer"></div>
+    <script>
+      fetch('/files')
+          .then(response => response.json())
+          .then(data => {
+              const fileContainer = document.getElementById('fileContainer');
+              data.forEach(({ filename, description, subject }) => {
+                  const subjectElement = document.createElement('h4');
+                  subjectElement.className = "Subject";
+                  subjectElement.textContent = subject;
+                  const span = document.createElement('span');
+                  span.textContent = description;
+                  const MakeItLinkContainer = document.createElement('a');
+                  MakeItLinkContainer.className = "Link";
+                  MakeItLinkContainer.href = `./works/${filename}.html`;
+                  const imageContainer = document.createElement('div');
+                  imageContainer.style.position = 'relative';
+                  const image = document.createElement('img');
+                  image.src = "./images/7rfa.jpg";
+                  image.className = "SubjectImage";
+                  const container = document.createElement('main');
+                  const fileDiv = document.createElement('div');
+                  fileDiv.className = 'file';
+                  const fileLink = document.createElement('a');
+                  fileLink.href = `/works/${filename}`;
+                  fileLink.textContent = filename;
+
+                  // Position subject element on top of the image
+                  subjectElement.style.textAlign = 'center';
+                  subjectElement.style.position = 'absolute';
+                  subjectElement.style.top = '50%';
+                  subjectElement.style.left = '50%';
+                  subjectElement.style.transform = 'translate(-50%, -50%)'; // Center the subject element
+
+                  // Append image and subject to the container
+                  imageContainer.appendChild(image);
+                  imageContainer.appendChild(subjectElement);
+
+                  fileDiv.appendChild(fileLink);
+                  fileDiv.appendChild(span);
+                  MakeItLinkContainer.appendChild(imageContainer);
+                  MakeItLinkContainer.appendChild(fileDiv);
+                  container.appendChild(MakeItLinkContainer);
+                  fileContainer.appendChild(container);
+              });
+          })
+      .catch(error => console.error('Error fetching files:', error));
+    </script>
+  </section>
+</body>
+</html>
