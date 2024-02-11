@@ -7,5 +7,14 @@ module.exports = {
         path: path.resolve(__dirname, 'public'), // Output to the public folder
         filename: 'bundle.js'
     },
-    // other webpack configuration...
+    resolve: {
+        fallback: {
+            http: require.resolve('stream-http'),
+            https: require.resolve('https-browserify'),
+            assert: require.resolve('assert/'),
+            net: require.resolve('net-browserify'),
+            tls: require.resolve('tls-browserify'),
+            assert: require.resolve('assert')
+        }
+    }    
 };
