@@ -4,6 +4,7 @@
     "jsdom": "^24.0.0"
   },
   "scripts": {
-    "build": "gulp"  
-  }
+  "build": "webpack --mode production"
+}
+
 }
