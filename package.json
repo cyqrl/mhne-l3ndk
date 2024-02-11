@@ -7,7 +7,7 @@
     "stream-http": "^3.2.0",
     "https-browserify": "^1.0.0",
     "assert": "^2.0.0",
-    "net-browserify": "^2.0.1",
+    "net-browserify": "^0.2.4",
     "tls-browserify": "^0.5.0"
   },
   "scripts": {
