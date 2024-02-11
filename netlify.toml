@@ -1,8 +1,7 @@
 [build]
-command = "npm install"
+command = "npm run build"  # Adjusted to run the build script defined in package.json
 publish = "public"
 
-
 [dev]
-command = "node app.js"  # Command to start your Express.js server
-port = 3000  # Port your Express.js server listens to
+command = "node app.js"
+port = 3000
