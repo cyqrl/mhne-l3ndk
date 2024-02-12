@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.post('/submit', (req, res) => {
+app.post('/submit/', (req, res) => {
   const { name, phone, location, subject, description } = req.body;
 
   const worksDir = './public/works';
